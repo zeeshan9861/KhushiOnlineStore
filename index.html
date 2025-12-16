@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi Online Stores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Khushi Online Stores</h1>
+        <button id="view-cart-btn" type="button" aria-label="View Cart">
+            🛒 View Cart (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <!-- Floating Cart Icon for usability -->
+    <button id="fab-cart" class="fab" aria-label="View cart">🛒<span id="fab-count">0</span></button>
+
+
+    <div id="sticky-bar">
+        <div class="sticky-inner">
+            <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+            <button id="search-btn" type="button" aria-label="Search Products" style="margin-left:8px; padding:12px 18px; border-radius:8px; background:#007bff; color:white; border:none; font-weight:600; cursor:pointer;">Search</button>
+            <select id="sort-dropdown" class="sort-dropdown">
+                <option value="default">Sort: Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+            </select>
+        </div>
+        <nav aria-label="Product Categories">
+            <ul class="category-pills" id="categories">
+                <li><a href="#" data-category="all" class="active-category">All</a></li>
+                <li><a href="#" data-category="Torch">Torch</a></li>
+                <li><a href="#" data-category="Lamps">Lamps</a></li>
+                <li><a href="#" data-category="accessories">Accessories</a></li>
+                <li><a href="#" data-category="Fan">Fan</a></li>
+                <li><a href="#" data-category="Others">Others</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <section id="store-banner">
+            <img src="images/Banner.PNG" alt="Welcome to Khushi Online Stores" class="store-image" loading="lazy">
+            <div class="banner-overlay">
+                <h2>Rourkela Odisha Electronics Wholesaler</h2>
+                <p>Quality products delivered After Order</p>
+            </div>
+        </section>
+
+        <main>
+            <section class="products-section" id="product-list">
+                <h2 class="sr-only">Products</h2>
+                <div id="products-grid"></div>
+            </section>
+            <section id="pagination-section" aria-label="Pagination Controls">
+                <div class="pagination">
+                    <button id="prev-page-btn" class="pagination-btn" type="button" aria-label="Previous Page">← Previous</button>
+                    <span id="page-info" class="page-info">Page 1</span>
+                    <button id="next-page-btn" class="pagination-btn" type="button" aria-label="Next Page">Next →</button>
+                </div>
+            </section>
+        </main>
+
+        <div id="cart-modal" class="modal" aria-modal="true" role="dialog" tabindex="-1">
+            <div class="modal-content">
+                <button class="close-btn" type="button" aria-label="Close Cart">&times;</button>
+                <h3>Your Shopping Cart</h3>
+                <div id="cart-error-message" class="error-message" style="display: none;"></div>
+                <form id="customer-details-form" autocomplete="off" novalidate>
+                    <h4>Please Enter Your Details:</h4>
+                    <input type="text" id="cust-name" placeholder="Your Full Name" required autocomplete="name">
+                    <input type="text" id="cust-whatsapp" placeholder="WhatsApp Number (include country code, e.g. +91)" required autocomplete="tel">
+                    <textarea id="cust-address" placeholder="Delivery Address (Full Address with Pin Code)" required autocomplete="street-address"></textarea>
+                </form>
+                <div class="cart-header">
+                    <span>Product</span>
+                    <span>Quantity</span>
+                    <span>Subtotal</span>
+                    <span>Remove</span>
+                </div>
+                <ul id="cart-items"></ul>
+                <div id="cart-total">Total: ₹0</div>
+                <button id="whatsapp-share-btn" type="button">📤 Send Order on WhatsApp</button>
+                <p class="note">To confirm your order, enter your name and delivery address, then tap the WhatsApp button.</p>
+            </div>
+        </div>
+
+        <footer id="site-footer">
+            <div class="footer-inner">
+                <div class="trust-badges">
+                    <span class="badge">💵 Cash on Delivery</span>
+                    <span class="badge">⚡ Fast Delivery All Over India</span>
+                </div>
+                <div class="support">
+                    <p>Need Help? Call/WhatsApp: <a href="tel:+918102424024">+91-81024 24024</a></p>
+                    <div style="margin-top: 12px;">
+                        <a href="https://maps.app.goo.gl/kFCSRQYxWJvGhb8o9" target="_blank" rel="noopener noreferrer" class="shop-address" title="View on Google Maps">📍 Shop Address: Khushi Electronics, Amna Residency, Bhatti Rd, Rourkela, Odisha 769001</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script-oop.js" defer></script>
+    </body>
+    </html>
