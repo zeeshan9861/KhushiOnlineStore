@@ -1,0 +1,82 @@
+[
+  {
+    "id": "KE000001",
+    "name": "Persona Kisan",
+    "description": "Powerful Battery. Long-Lasting Light. Torch Lighting Time: Up to 6 Hrs. Emergency Light Backup: 14 Hrs. Strong & Break Resistant ABS Body. LED Longevity: 50,000 hrs. Mobile Charging Facility. Brand: PERSONA.",
+    "price": 880,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000001.JPG"
+  },
+  {
+    "id": "KE000002",
+    "name": "Persona Agni",
+    "description": "High performance torch. Details coming soon.",
+    "price": 1180,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000002.jpg"
+  },
+  {
+    "id": "KE000003",
+    "name": "Persona Jawan",
+    "description": "Compact and reliable torch. Details coming soon.",
+    "price": 780,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000003.jpg"
+  },
+  {
+    "id": "KE000004",
+    "name": "Persona Maharaja",
+    "description": "Premium torch. Details coming soon.",
+    "price": 880,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000004.jpg"
+  },
+  {
+    "id": "KE000005",
+    "name": "Persona Nano Plus",
+    "description": "Nano Plus torch. Details coming soon.",
+    "price": 550,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000005.jpg"
+  },
+  {
+    "id": "KE000006",
+    "name": "Persona Nano",
+    "description": "Nano torch. Details coming soon.",
+    "price": 510,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000006.jpg"
+  },
+  {
+    "id": "KE000007",
+    "name": "Persona Nargis",
+    "description": "Nargis torch. Details coming soon.",
+    "price": 610,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000007.jpg"
+  },
+  {
+    "id": "KE000008",
+    "name": "Persona Rocket",
+    "description": "Rocket torch. Details coming soon.",
+    "price": 680,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000008.jpg"
+  },
+  {
+    "id": "KE000009",
+    "name": "Persona Thar",
+    "description": "Thar torch. Details coming soon.",
+    "price": 780,
+    "category": "Kisan Torch",
+    "imageUrl": "images/KE000009.jpg"
+  },
+  {
+    "id": "KE000010",
+    "name": "Persona Cool Master",
+    "description": "Cool Master fan. Details coming soon.",
+    "price": 980,
+    "category": "Fan",
+    "imageUrl": "images/KE000010.jpg"
+  }
+]
