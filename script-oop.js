@@ -1275,6 +1275,12 @@ class AppController {
       return;
     }
 
+    const preview = document.getElementById('message-preview');
+    if (preview) {
+      preview.textContent = message;
+      preview.style.display = 'block';
+    }
+
     this.renderer.clearError();
     
     // Copy message to clipboard

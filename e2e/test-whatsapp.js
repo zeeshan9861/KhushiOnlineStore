@@ -28,10 +28,15 @@ const puppeteer = require('puppeteer');
   await page.type('#cust-address', 'T');
 
   // Click WhatsApp button and capture popup + preview
-  const [popup] = await Promise.all([
-    page.waitForEvent('popup').catch(() => null),
-    page.click('#whatsapp-share-btn')
-  ]);
+  const popupPromise = new Promise(resolve => {
+    const timeout = setTimeout(() => resolve(null), 1500);
+    page.once('popup', popup => {
+      clearTimeout(timeout);
+      resolve(popup);
+    });
+  });
+  await page.click('#whatsapp-share-btn');
+  const popup = await popupPromise;
 
   // Wait for preview to appear
   await page.waitForSelector('#message-preview', { visible: true, timeout: 3000 });
