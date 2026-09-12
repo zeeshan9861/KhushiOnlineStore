@@ -1,3 +1,17 @@
+# Product API Server
+
+## Free database setup with Supabase
+
+The API supports a free Supabase Postgres project. Product data is stored in the `products` table and remains available to the admin console and storefront from any browser.
+
+1. Create a project at [supabase.com](https://supabase.com/) on the free plan.
+2. Open Supabase **SQL Editor** and run [`supabase_schema.sql`](supabase_schema.sql).
+3. Copy `.env.example` to `.env` and set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` from Supabase **Project Settings > API**.
+4. Run `npm start` and open `http://localhost:3001`.
+
+The service role key must stay in the server environment. Do not put it in `api-config.js`, browser JavaScript, Netlify frontend variables, or Git.
+
+When Supabase variables are present, `GET /api/products` reads the database and `POST /api/products` replaces the database contents. Without them, the API falls back to `products.json` for local development.
 Server persistence for Khushi Online Store
 
 This repository includes a minimal Express server to persist `products.json`.

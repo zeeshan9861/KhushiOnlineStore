@@ -4,6 +4,14 @@ Overview
 
 - Deploy the static frontend to Netlify.
 - Deploy the Express backend (`server.js`) to a small host (Render, Railway, Heroku, VPS).
+- Configure the backend with a free Supabase project using `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`.
+Quick steps
+
+0) Create the database
+- Create a free Supabase project.
+- Run [`supabase_schema.sql`](supabase_schema.sql) in Supabase SQL Editor.
+- Set `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and optionally `SUPABASE_PRODUCTS_TABLE=products` in the backend host environment.
+- Never expose the service role key in the frontend.
 - Point the frontend to the backend by creating an `api-config.js` file containing `window.API_BASE_URL = 'https://your-backend.example';` and include it in the published site root.
 
 Quick steps
@@ -36,7 +44,7 @@ Quick steps
 4) Verify end-to-end
 - Admin console URL: https://your-netlify-site/admin-console-system/admin-console.html
 - Main site: https://your-netlify-site/
-- When you delete/add a product in Admin, it will POST to `https://your-backend-domain/api/products` and the server will persist to `products.json`. The main site will fetch from the same backend.
+- When you delete/add a product in Admin, it will POST to `https://your-backend-domain/api/products` and the server will persist to Supabase. The main site will fetch from the same backend.
 
 Notes & Production concerns
 - Do not rely on `products.json` file persistence for a production app; migrate to a database (Postgres, MongoDB, or Supabase) for concurrency and durability.
